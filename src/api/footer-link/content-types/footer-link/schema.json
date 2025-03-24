@@ -1,0 +1,13 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_links",
+  "info": {
+    "singularName": "footer-link",
+    "pluralName": "footer-links",
+    "displayName": "Footer Link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {}
+}

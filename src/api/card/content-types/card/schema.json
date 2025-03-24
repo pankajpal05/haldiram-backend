@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "singularName": "card",
+    "pluralName": "cards",
+    "displayName": "card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "tag": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

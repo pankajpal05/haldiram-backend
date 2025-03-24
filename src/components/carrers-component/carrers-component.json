@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_carrers_component_carrers_components",
+  "info": {
+    "displayName": "Carrers Component",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "carrerTeaser": {
+      "type": "component",
+      "repeatable": true,
+      "component": "teaser.teaser"
+    },
+    "slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "teaser.teaser"
+    },
+    "heading": {
+      "type": "string"
+    }
+  }
+}

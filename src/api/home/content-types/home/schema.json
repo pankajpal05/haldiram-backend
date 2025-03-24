@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heroBanner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "video-teaser.video-teaser"
+    },
+    "latestSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "latest-section.latest-section"
+    },
+    "legacyTeaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "teaser.teaser"
+    },
+    "achievementSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "experience-component.experience-component"
+    },
+    "brandSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "teaser.teaser"
+    },
+    "carrersSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "carrers-component.carrers-component"
+    }
+  }
+}

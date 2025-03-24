@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_footer_tagline_footer_taglines",
+  "info": {
+    "displayName": "Footer Tagline"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "component",
+      "repeatable": true,
+      "component": "title.title"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_latest_section_latest_sections",
+  "info": {
+    "displayName": "Latest Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "newsTeaser": {
+      "type": "component",
+      "repeatable": true,
+      "component": "teaser.teaser"
+    },
+    "socialTeaser": {
+      "type": "component",
+      "repeatable": true,
+      "component": "teaser.teaser"
+    }
+  }
+}

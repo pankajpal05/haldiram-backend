@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_menu_item_menu_items",
+  "info": {
+    "displayName": "Menu Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "regex": "^[A-Za-z\\s]+$"
+    },
+    "url": {
+      "type": "string"
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

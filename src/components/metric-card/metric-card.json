@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_metric_card_metric_cards",
+  "info": {
+    "displayName": "Metric Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

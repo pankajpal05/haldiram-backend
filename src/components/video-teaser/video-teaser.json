@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_video_teaser_video_teasers",
+  "info": {
+    "displayName": "Video Teaser",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "videoMedia": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta-button.cta-button"
+    }
+  }
+}

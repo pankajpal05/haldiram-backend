@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_teaser_teasers",
+  "info": {
+    "displayName": "Teaser",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta-button.cta-button"
+    }
+  }
+}

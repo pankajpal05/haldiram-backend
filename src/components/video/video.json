@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_video_videos",
+  "info": {
+    "displayName": "Video",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

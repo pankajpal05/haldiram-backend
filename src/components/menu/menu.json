@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_menu_menus",
+  "info": {
+    "displayName": "Menu",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "regex": "^[A-Za-z\\s]+$"
+    },
+    "url": {
+      "type": "string"
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu-item.menu-item"
+    }
+  }
+}

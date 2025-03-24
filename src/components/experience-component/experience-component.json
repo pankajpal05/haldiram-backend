@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_experience_component_experience_components",
+  "info": {
+    "displayName": "Experience Component",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "metricSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "metric-card.metric-card"
+    },
+    "teaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "teaser.teaser"
+    }
+  }
+}
