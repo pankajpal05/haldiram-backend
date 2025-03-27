@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_notes",
+  "info": {
+    "singularName": "footer-note",
+    "pluralName": "footer-notes",
+    "displayName": "Footer Note",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tag": {
+      "type": "component",
+      "repeatable": true,
+      "component": "title.title"
+    },
+    "copyRightText": {
+      "type": "string"
+    }
+  }
+}

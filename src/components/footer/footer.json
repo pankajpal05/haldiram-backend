@@ -6,23 +6,11 @@
   },
   "options": {},
   "attributes": {
-    "logo": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "title": {
-      "type": "string"
-    },
-    "tagLine": {
-      "type": "string",
-      "regex": "^[A-Za-z]+$"
-    },
     "address": {
       "type": "text"
+    },
+    "addressLabel": {
+      "type": "string"
     }
   }
 }

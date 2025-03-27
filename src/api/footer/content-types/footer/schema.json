@@ -18,8 +18,18 @@
     },
     "addressInfo": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "footer.footer"
+    },
+    "socialMedia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social-media.social-media"
+    },
+    "footerInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footer-info.footer-info"
     }
   }
 }

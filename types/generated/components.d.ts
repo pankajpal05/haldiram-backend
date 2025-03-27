@@ -50,6 +50,18 @@ export interface ExperienceComponentExperienceComponent
   };
 }
 
+export interface FooterInfoFooterInfo extends Struct.ComponentSchema {
+  collectionName: 'components_footer_info_footer_infos';
+  info: {
+    displayName: 'footerInfo';
+  };
+  attributes: {
+    footerLogo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    footerTagLine: Schema.Attribute.String;
+    newsLetterLabel: Schema.Attribute.String;
+  };
+}
+
 export interface FooterTaglineFooterTagline extends Struct.ComponentSchema {
   collectionName: 'components_footer_tagline_footer_taglines';
   info: {
@@ -68,9 +80,7 @@ export interface FooterFooter extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
-    logo: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
-    tagLine: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    addressLabel: Schema.Attribute.String;
   };
 }
 
@@ -146,6 +156,17 @@ export interface MetricCardMetricCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SocialMediaSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_social_media_social_medias';
+  info: {
+    displayName: 'Social Media';
+  };
+  attributes: {
+    socailIcon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    socialMediaUrl: Schema.Attribute.String;
+  };
+}
+
 export interface TeaserTeaser extends Struct.ComponentSchema {
   collectionName: 'components_teaser_teasers';
   info: {
@@ -206,6 +227,7 @@ declare module '@strapi/strapi' {
       'cta-button.cta-button': CtaButtonCtaButton;
       'description.description': DescriptionDescription;
       'experience-component.experience-component': ExperienceComponentExperienceComponent;
+      'footer-info.footer-info': FooterInfoFooterInfo;
       'footer-tagline.footer-tagline': FooterTaglineFooterTagline;
       'footer.footer': FooterFooter;
       'hero-banner.hero-banner': HeroBannerHeroBanner;
@@ -214,6 +236,7 @@ declare module '@strapi/strapi' {
       'menu-item.menu-item': MenuItemMenuItem;
       'menu.menu': MenuMenu;
       'metric-card.metric-card': MetricCardMetricCard;
+      'social-media.social-media': SocialMediaSocialMedia;
       'teaser.teaser': TeaserTeaser;
       'title.title': TitleTitle;
       'video-teaser.video-teaser': VideoTeaserVideoTeaser;
