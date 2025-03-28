@@ -21,11 +21,6 @@
       "repeatable": false,
       "component": "latest-section.latest-section"
     },
-    "legacyTeaser": {
-      "type": "component",
-      "repeatable": false,
-      "component": "teaser.teaser"
-    },
     "achievementSection": {
       "type": "component",
       "repeatable": false,
@@ -40,6 +35,11 @@
       "type": "component",
       "repeatable": false,
       "component": "carrers-component.carrers-component"
+    },
+    "legacyTeaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dynamic-teaser.dynamic-teaser"
     }
   }
 }

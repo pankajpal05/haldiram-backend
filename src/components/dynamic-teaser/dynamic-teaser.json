@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_dynamic_teaser_dynamic_teaser_s",
+  "info": {
+    "displayName": "Dynamic Teaser ",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "desktopImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobileImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tag": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta-button.cta-button"
+    }
+  }
+}

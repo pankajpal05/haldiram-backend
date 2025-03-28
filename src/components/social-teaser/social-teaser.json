@@ -1,40 +1,37 @@
 {
-  "collectionName": "components_video_teaser_video_teasers",
+  "collectionName": "components_social_teaser_social_teasers",
   "info": {
-    "displayName": "Media Teaser",
+    "displayName": "socialTeaser",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "videoMedia": {
+    "image": {
       "type": "media",
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
-        "videos"
+        "images"
       ]
     },
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "description": {
       "type": "text"
-    },
-    "tag": {
-      "type": "string"
     },
     "cta": {
       "type": "component",
       "repeatable": false,
       "component": "cta-button.cta-button"
     },
-    "image": {
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

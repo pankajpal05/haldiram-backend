@@ -518,7 +518,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       'latest-section.latest-section',
       false
     >;
-    legacyTeaser: Schema.Attribute.Component<'teaser.teaser', false>;
+    legacyTeaser: Schema.Attribute.Component<
+      'dynamic-teaser.dynamic-teaser',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;

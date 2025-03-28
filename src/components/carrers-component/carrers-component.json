@@ -8,16 +8,26 @@
   "attributes": {
     "carrerTeaser": {
       "type": "component",
-      "repeatable": true,
-      "component": "teaser.teaser"
-    },
-    "slider": {
-      "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "teaser.teaser"
     },
     "heading": {
       "type": "string"
+    },
+    "socialTeaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "social-teaser.social-teaser"
+    },
+    "numberTeaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "teaser.teaser"
+    },
+    "slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "carrer-slider.carrer-slider"
     }
   }
 }

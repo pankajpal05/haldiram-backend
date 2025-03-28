@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CarrerSliderCarrerSlider extends Struct.ComponentSchema {
+  collectionName: 'components_carrer_slider_carrer_sliders';
+  info: {
+    displayName: 'Carrer Slider';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta-button.cta-button', false>;
+    slide: Schema.Attribute.Component<'description.description', true>;
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CarrersComponentCarrersComponent
   extends Struct.ComponentSchema {
   collectionName: 'components_carrers_component_carrers_components';
@@ -8,9 +21,14 @@ export interface CarrersComponentCarrersComponent
     displayName: 'Carrers Component';
   };
   attributes: {
-    carrerTeaser: Schema.Attribute.Component<'teaser.teaser', true>;
+    carrerTeaser: Schema.Attribute.Component<'teaser.teaser', false>;
     heading: Schema.Attribute.String;
-    slider: Schema.Attribute.Component<'teaser.teaser', true>;
+    numberTeaser: Schema.Attribute.Component<'teaser.teaser', false>;
+    slider: Schema.Attribute.Component<'carrer-slider.carrer-slider', false>;
+    socialTeaser: Schema.Attribute.Component<
+      'social-teaser.social-teaser',
+      false
+    >;
   };
 }
 
@@ -22,7 +40,7 @@ export interface CtaButtonCtaButton extends Struct.ComponentSchema {
   };
   attributes: {
     Icon: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -34,6 +52,22 @@ export interface DescriptionDescription extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface DynamicTeaserDynamicTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_teaser_dynamic_teaser_s';
+  info: {
+    description: '';
+    displayName: 'Dynamic Teaser ';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta-button.cta-button', false>;
+    description: Schema.Attribute.Text;
+    desktopImage: Schema.Attribute.Media<'images', true>;
+    mobileImage: Schema.Attribute.Media<'images', true>;
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -112,7 +146,10 @@ export interface LatestSectionLatestSection extends Struct.ComponentSchema {
   attributes: {
     heading: Schema.Attribute.String;
     newsTeaser: Schema.Attribute.Component<'teaser.teaser', true>;
-    socialTeaser: Schema.Attribute.Component<'teaser.teaser', true>;
+    socialTeaser: Schema.Attribute.Component<
+      'social-teaser.social-teaser',
+      true
+    >;
   };
 }
 
@@ -167,6 +204,21 @@ export interface SocialMediaSocialMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SocialTeaserSocialTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_social_teaser_social_teasers';
+  info: {
+    description: '';
+    displayName: 'socialTeaser';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta-button.cta-button', false>;
+    description: Schema.Attribute.Text;
+    Icon: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface TeaserTeaser extends Struct.ComponentSchema {
   collectionName: 'components_teaser_teasers';
   info: {
@@ -197,11 +249,12 @@ export interface VideoTeaserVideoTeaser extends Struct.ComponentSchema {
   collectionName: 'components_video_teaser_video_teasers';
   info: {
     description: '';
-    displayName: 'Video Teaser';
+    displayName: 'Media Teaser';
   };
   attributes: {
     cta: Schema.Attribute.Component<'cta-button.cta-button', false>;
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images', true>;
     tag: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     videoMedia: Schema.Attribute.Media<'videos', true> &
@@ -223,9 +276,11 @@ export interface VideoVideo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'carrer-slider.carrer-slider': CarrerSliderCarrerSlider;
       'carrers-component.carrers-component': CarrersComponentCarrersComponent;
       'cta-button.cta-button': CtaButtonCtaButton;
       'description.description': DescriptionDescription;
+      'dynamic-teaser.dynamic-teaser': DynamicTeaserDynamicTeaser;
       'experience-component.experience-component': ExperienceComponentExperienceComponent;
       'footer-info.footer-info': FooterInfoFooterInfo;
       'footer-tagline.footer-tagline': FooterTaglineFooterTagline;
@@ -237,6 +292,7 @@ declare module '@strapi/strapi' {
       'menu.menu': MenuMenu;
       'metric-card.metric-card': MetricCardMetricCard;
       'social-media.social-media': SocialMediaSocialMedia;
+      'social-teaser.social-teaser': SocialTeaserSocialTeaser;
       'teaser.teaser': TeaserTeaser;
       'title.title': TitleTitle;
       'video-teaser.video-teaser': VideoTeaserVideoTeaser;
