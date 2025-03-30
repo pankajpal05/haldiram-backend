@@ -369,34 +369,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiCardCard extends Struct.CollectionTypeSchema {
-  collectionName: 'cards';
-  info: {
-    displayName: 'card';
-    pluralName: 'cards';
-    singularName: 'card';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::card.card'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    tag: Schema.Attribute.String;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiFooterNoteFooterNote extends Struct.SingleTypeSchema {
   collectionName: 'footer_notes';
   info: {
@@ -453,6 +425,41 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     nav: Schema.Attribute.Component<'menu.menu', true>;
     publishedAt: Schema.Attribute.DateTime;
     socialMedia: Schema.Attribute.Component<'social-media.social-media', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHaldiramNewsLetterHaldiramNewsLetter
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'haldiram_news_letters';
+  info: {
+    description: '';
+    displayName: 'Haldiram NewsLetter';
+    pluralName: 'haldiram-news-letters';
+    singularName: 'haldiram-news-letter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::haldiram-news-letter.haldiram-news-letter'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    timeStamp: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1041,9 +1048,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::card.card': ApiCardCard;
       'api::footer-note.footer-note': ApiFooterNoteFooterNote;
       'api::footer.footer': ApiFooterFooter;
+      'api::haldiram-news-letter.haldiram-news-letter': ApiHaldiramNewsLetterHaldiramNewsLetter;
       'api::header.header': ApiHeaderHeader;
       'api::home.home': ApiHomeHome;
       'plugin::content-releases.release': PluginContentReleasesRelease;

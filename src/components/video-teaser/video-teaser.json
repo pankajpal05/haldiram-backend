@@ -9,7 +9,7 @@
     "videoMedia": {
       "type": "media",
       "multiple": true,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "videos"
       ]
@@ -30,11 +30,12 @@
       "component": "cta-button.cta-button"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

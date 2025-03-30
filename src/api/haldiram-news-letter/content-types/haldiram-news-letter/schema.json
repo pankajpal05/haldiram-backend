@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "haldiram_news_letters",
+  "info": {
+    "singularName": "haldiram-news-letter",
+    "pluralName": "haldiram-news-letters",
+    "displayName": "Haldiram NewsLetter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "string",
+      "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+      "required": true,
+      "unique": true
+    },
+    "timeStamp": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    }
+  }
+}

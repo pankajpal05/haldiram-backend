@@ -41,6 +41,7 @@ export interface CtaButtonCtaButton extends Struct.ComponentSchema {
   attributes: {
     Icon: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -257,8 +258,7 @@ export interface VideoTeaserVideoTeaser extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images', true>;
     tag: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    videoMedia: Schema.Attribute.Media<'videos', true> &
-      Schema.Attribute.Required;
+    videoMedia: Schema.Attribute.Media<'videos', true>;
   };
 }
 
